@@ -1,0 +1,21 @@
+add_executable(app)
+target_sources(app
+    PRIVATE
+        ./main.cpp
+        ./AudioManager.cpp
+        ./App.cpp
+        ./Graphic.cpp
+        ./Renderer.cpp
+        ./ResourceManager.cpp
+        ./Shader.cpp
+        ./Texture.cpp
+)
+
+target_link_libraries(app
+    PRIVATE
+        glad
+        glm::glm
+        glfw
+        sfml-audio
+        stb
+)

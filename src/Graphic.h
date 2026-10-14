@@ -1,0 +1,26 @@
+#pragma once
+
+#include <glad/glad.h>
+#include <glm/glm.hpp>
+
+#include <string>
+
+class Texture;
+class Renderer;
+
+class Graphic {
+    public:
+        glm::vec2 position;
+        glm::vec2 size;
+        float rotation;
+        glm::vec4 color;
+        Texture* texture;
+        std::string name;
+
+        Graphic();
+        Graphic(glm::vec2 position, glm::vec2 size, float rotation, Texture* texture);
+
+        void update(float dt);
+
+        void draw(Renderer &renderer);
+};
