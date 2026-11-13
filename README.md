@@ -5,6 +5,10 @@ Extra steps I do after cloning (in vscode environment)
 2. Edit CMakePresets.json "binaryDir" to be "${sourceDir}/build" (this is my preference over the default)
 3. Make sure to run project from project root directory (not the build directory) because paths (assets, shaders, etc.)
 are relative to root
+4. For debugger, add the following to vscode settings.json (CTRL+SHIFT+P -> Preferences: Open Workspace Settings (JSON))
+    "cmake.debugConfig" : {
+        "cwd": "${workspaceFolder}"
+    }   
 
 Note:
 May not work with msvs C++ compiler due to minor syntactical difference such as using "not" instead of "!". 
